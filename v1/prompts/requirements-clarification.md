@@ -162,11 +162,20 @@ they are already established by authoritative artifacts.
 
 Provide:
 
-- The current specification
-- Relevant architecture or ADRs
+- The current authoritative artifact under clarification
+- Relevant upstream and downstream artifacts
 - Existing acceptance criteria
 - Security and quality requirements where applicable
 
-The resulting questions should be resolved and incorporated into the
-authoritative project artifacts before implementation proceeds when they are
-classified as blocking.
+Clarification output is an analysis, not an authoritative project artifact.
+Do not treat its questions, assumptions, or proposed interpretations as
+approved requirements or decisions.
+
+Clarification questions should be resolved by the appropriate human authority.
+After resolution, incorporate the authorized decision into the appropriate
+authoritative artifact, such as Intent, Requirements, or Specification, and
+maintain the relevant `CLR-###` traceability.
+
+When a clarification is blocking, downstream implementation or verification
+should not proceed until the necessary resolution has been incorporated into
+the authoritative artifact.

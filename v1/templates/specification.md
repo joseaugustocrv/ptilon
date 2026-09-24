@@ -317,9 +317,33 @@ Before the specification is considered ready for planning, verify that:
 
 ## 23. Ptilon Workflow
 
-This specification is intended to progress through:
+The specification is part of the canonical Ptilon lifecycle:
 
-Specify → Clarify → Plan → Checklist → Tasks → Analyze → Implement → Converge
+```text
+Intent
+  ↓
+Requirements
+  ↓
+Specification
+  ↓
+Architecture & Design
+  ↓
+Plan
+  ↓
+Tasks
+  ↓
+Implementation
+  ↓
+Verification
+  ↓
+Convergence
+  ↓
+Release
+```
+
+Clarification, checklists, analysis, and reviews are cross-cutting activities
+or gates performed at the relevant points in this lifecycle.
 
 The specification remains the primary source of intended product behavior
-throughout the lifecycle.
+within its scope and must remain traceable to the approved upstream intent and
+requirements.

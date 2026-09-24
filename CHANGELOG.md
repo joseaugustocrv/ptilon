@@ -2,6 +2,19 @@
 
 All notable changes to Ptilon are documented in this file.
 
+## [1.0.1] - 2026-09-24
+
+### Added
+
+- Added a reusable Intent template for establishing project or change intent
+  before downstream engineering artifacts.
+- Clarified that Clarification is a cross-cutting activity rather than a
+  lifecycle stage.
+- Clarified that clarification output is non-authoritative until an authorized
+  human resolution is incorporated into the applicable authoritative artifact.
+- Updated the Specification template and documentation references to remain
+  aligned with the canonical lifecycle.
+
 ## [1.0.0] - 2026-09-24
 
 ### Added

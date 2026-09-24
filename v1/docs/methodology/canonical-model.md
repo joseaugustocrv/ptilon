@@ -55,7 +55,12 @@ a project-specific extension.
 ### Intent
 
 The desired outcome, problem, objectives, constraints, and other information
-that establishes why the work exists.
+that establishes why the work exists. Intent is the upstream expression of why
+the work exists and what outcome is desired; it should not unnecessarily
+prescribe the solution.
+
+The reusable structure for recording Intent is defined by the Ptilon Intent
+Template.
 
 ### Requirements
 
@@ -104,7 +109,21 @@ verification evidence to identify and resolve remaining discrepancies.
 The controlled decision to deliver the verified result, subject to applicable
 release criteria, residual-risk decisions, and approvals.
 
-## 5. Reviews Are Cross-Cutting Activities
+## 5. Cross-Cutting Activities
+
+Clarification, analysis, checklists, security analysis, quality review, code
+review, and other reviews are activities or gates performed at the relevant
+point in the lifecycle. They do not create additional lifecycle stages.
+
+### Clarification
+
+Clarification is used when ambiguity, missing information, or conflicting
+statements could affect implementation or verification. It produces questions,
+identified assumptions, and surfaced conflicts for human resolution.
+
+Clarification output is not itself authoritative. Resolved decisions must be
+incorporated into the appropriate authoritative artifact, such as Intent,
+Requirements, or Specification, before downstream work relies on them.
 
 Review is not a lifecycle stage between Convergence and Release. Reviews occur
 where their subject matter requires them, for example:

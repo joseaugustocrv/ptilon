@@ -93,6 +93,12 @@ Includes:
 Defines what the software must accomplish and the constraints under
 which it must operate.
 
+Intent is established before requirements and is recorded using the Ptilon
+Intent Template when a reusable artifact structure is needed. Clarification is
+a cross-cutting activity used to resolve material ambiguity, missing
+information, or conflicts; its resolutions are incorporated into the applicable
+authoritative artifacts.
+
 Includes:
 
 - stakeholder needs;

@@ -63,6 +63,7 @@ nav:
       - Traceability Review: prompts/traceability-review.md
 
   - Templates:
+      - Intent: templates/intent.md
       - ADR: templates/adr.md
       - Bug Report: templates/bug-report.md
       - Change Request: templates/change-request.md
