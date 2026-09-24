@@ -1,0 +1,110 @@
+site_name: Ptilon
+site_description: Software engineering with human and artificial intelligence working together.
+site_url: https://joseaugustocrv.github.io/ptilon/
+
+docs_dir: v1
+site_dir: .mkdocs-site
+
+exclude_docs: |
+  .*
+  !/templates/
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+  logo: assets/logo/ptilon-logo.png
+  favicon: assets/logo/ptilon-logo.png
+
+nav:
+  - Home: README.md
+
+  - Methodology:
+      - Overview: docs/methodology/README.md
+      - Canonical Model: docs/methodology/canonical-model.md
+
+  - Workflow:
+      - Overview: docs/workflow/README.md
+
+  - Governance:
+      - Overview: docs/governance/README.md
+
+  - Security:
+      - Overview: docs/security/README.md
+
+  - Quality:
+      - Overview: docs/quality/README.md
+
+  - Standards:
+      - Overview: docs/standards/README.md
+
+  - Prompts:
+      - Overview: prompts/README.md
+      - ADR Review: prompts/adr-review.md
+      - Architecture Review: prompts/architecture-review.md
+      - Change Impact Analysis: prompts/change-impact-analysis.md
+      - Code Review: prompts/code-review.md
+      - Convergence Check: prompts/convergence-check.md
+      - Documentation Review: prompts/documentation-review.md
+      - Implementation: prompts/implementation.md
+      - Prompt Version Metadata: prompts/prompt-version-metadata.md
+      - Quality Review: prompts/quality-review.md
+      - Release Readiness: prompts/release-readiness.md
+      - Requirements Clarification: prompts/requirements-clarification.md
+      - Security Review: prompts/security-review.md
+      - Security Threat Modeling: prompts/security-threat-modeling.md
+      - Specification Review: prompts/specification-review.md
+      - Task Decomposition: prompts/task-decomposition.md
+      - Test Generation: prompts/test-generation.md
+      - Traceability Review: prompts/traceability-review.md
+
+  - Templates:
+      - ADR: templates/adr.md
+      - Bug Report: templates/bug-report.md
+      - Change Request: templates/change-request.md
+      - Constitution: templates/constitution.md
+      - Quality Checklist: templates/quality-checklist.md
+      - Release Checklist: templates/release-checklist.md
+      - Specification: templates/specification.md
+      - Tasks: templates/tasks.md
+      - Test Plan: templates/test-plan.md
+      - Threat Model: templates/threat-model.md
+
+  - Examples:
+      - Overview: examples/README.md
+      - User Profile API:
+          - Overview: examples/user-profile-api/README.md
+          - API Contract: examples/user-profile-api/api-contract.md
+          - Architecture: examples/user-profile-api/architecture.md
+          - Definition of Done: examples/user-profile-api/definition-of-done.md
+          - Release Checklist: examples/user-profile-api/release-checklist.md
+          - Specification: examples/user-profile-api/specification.md
+          - Tasks: examples/user-profile-api/tasks.md
+          - Test Plan: examples/user-profile-api/test-plan.md
+          - Threat Model: examples/user-profile-api/threat-model.md
+          - Traceability: examples/user-profile-api/traceability.md
+
+  - References:
+      - Overview: references/README.md
+
+      - Engineering:
+          - ADR: references/engineering/adr.md
+          - BDD: references/engineering/bdd.md
+          - CI/CD: references/engineering/cicd.md
+          - TDD: references/engineering/tdd.md
+
+      - SDD:
+          - GitHub Spec Kit: references/sdd/github-spec-kit.md
+
+      - Security:
+          - NIST SSDF: references/security/nist-ssdf.md
+
+      - Standards:
+          - ISO/IEC/IEEE 12207: references/standards/iso-12207.md
+          - ISO/IEC/IEEE 25010: references/standards/iso-25010.md
+          - ISO/IEC/IEEE 29148: references/standards/iso-29148.md
+          - ISO/IEC/IEEE 42010: references/standards/iso-42010.md

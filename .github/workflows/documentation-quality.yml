@@ -1,0 +1,29 @@
+name: Documentation Quality
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  markdownlint:
+    name: Validate Markdown
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Run Markdown lint
+        uses: DavidAnson/markdownlint-cli2-action@v23.1.0
+        with:
+          globs: |
+            **/*.md
+            !.git/**
+            !.github/pull_request_template.md
+            !.github/ISSUE_TEMPLATE/**

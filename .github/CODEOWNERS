@@ -1,0 +1,23 @@
+# Default ownership for the repository
+* @joseaugustocrv
+
+# Methodology
+/v1/docs/methodology/ @joseaugustocrv
+/v1/docs/workflow/ @joseaugustocrv
+/v1/docs/quality/ @joseaugustocrv
+/v1/docs/security/ @joseaugustocrv
+/v1/docs/governance/ @joseaugustocrv
+
+# Standards and references
+/v1/docs/standards/ @joseaugustocrv
+/v1/references/ @joseaugustocrv
+
+# Reusable engineering assets
+/v1/templates/ @joseaugustocrv
+/v1/prompts/ @joseaugustocrv
+
+# Examples
+/v1/examples/ @joseaugustocrv
+
+# Repository automation
+/.github/ @joseaugustocrv
