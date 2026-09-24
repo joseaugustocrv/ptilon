@@ -11,7 +11,7 @@ A bug report should describe observable behavior and provide enough evidence to 
 
 ## 2. Bug Metadata
 
-- **Bug ID:** `<BUG-ID>`
+- **Bug / Issue Reference:** `<issue or bug reference>`
 - **Title:** `<short title>`
 - **Reported by:** `<person/team>`
 - **Date:** `<YYYY-MM-DD>`
@@ -27,7 +27,7 @@ A bug report should describe observable behavior and provide enough evidence to 
 - **Requirement:** `<REQ-ID>`
 - **Acceptance criterion:** `<ACC-ID>`
 - **Test:** `<TST-ID>`
-- **Change request:** `<CR-ID>` if applicable
+- **Change request:** `CHG-001` if applicable
 - **Release:** `<release>` if applicable
 
 ---

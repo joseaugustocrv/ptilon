@@ -26,6 +26,7 @@ nav:
   - Methodology:
       - Overview: docs/methodology/README.md
       - Canonical Model: docs/methodology/canonical-model.md
+      - Intent: docs/methodology/intent.md
 
   - Workflow:
       - Overview: docs/workflow/README.md
@@ -64,6 +65,7 @@ nav:
 
   - Templates:
       - Intent: templates/intent.md
+      - Requirements: templates/requirements.md
       - ADR: templates/adr.md
       - Bug Report: templates/bug-report.md
       - Change Request: templates/change-request.md

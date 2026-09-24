@@ -13,7 +13,7 @@ resulting artifacts.
 
 ## 2. Change Metadata
 
-- **Change ID:** `<CR-ID>`
+- **Change ID:** `CHG-001`
 - **Title:** `<short title>`
 - **Related specification:** `<path or reference>`
 - **Related issue:** `<issue/reference>`

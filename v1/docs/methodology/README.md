@@ -99,6 +99,9 @@ a cross-cutting activity used to resolve material ambiguity, missing
 information, or conflicts; its resolutions are incorporated into the applicable
 authoritative artifacts.
 
+The reusable [Requirements Template](../../templates/requirements.md) can be used
+when a structured requirements artifact is appropriate.
+
 Includes:
 
 - stakeholder needs;
@@ -477,7 +480,7 @@ A Ptilon implementation should produce or maintain, as applicable:
 - project constitution;
 - requirements;
 - specifications;
-- clarification decisions;
+- clarification records incorporated into authoritative artifacts;
 - acceptance criteria;
 - architecture documentation;
 - architecture decisions;
