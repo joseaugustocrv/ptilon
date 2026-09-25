@@ -2,6 +2,25 @@
 
 All notable changes to Ptilon are documented in this file.
 
+## [1.2.1] - 2026-09-25
+
+### Added
+
+- Made human validation an explicit default progression gate between lifecycle
+  activities.
+- Defined the status of downstream drafts generated before upstream approval as
+  provisional and non-authoritative.
+- Defined a blocking rule for material unresolved questions discovered at a
+  downstream activity: resolve the question, update and approve the authoritative
+  source, then revalidate affected downstream artifacts before continuing.
+
+### Changed
+
+- Clarified the distinction between generating downstream proposals for analysis
+  and advancing the lifecycle using approved authoritative artifacts.
+- Strengthened the workflow and methodology guidance so `Implementation Ready`
+  requires the applicable human approval gates to have been passed.
+
 ## [1.2.0] - 2026-09-25
 
 ### Added

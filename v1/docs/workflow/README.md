@@ -88,6 +88,20 @@ Specification-Driven Development. Spec Kit mechanisms such as Specify,
 Clarify, Plan, Checklist, Tasks, Analyze, Implement, and Converge are mapped
 onto the Ptilon lifecycle rather than replacing it.
 
+## Lifecycle Progression and Human Validation
+
+Each lifecycle activity may produce an AI-assisted draft, but the artifact
+becomes authoritative only after the applicable human validation and approval
+gate. By default, work does not advance past that gate on the basis of AI
+generation alone.
+
+A downstream activity may be explored before an upstream gate is approved when
+this helps discover dependencies or questions. Those downstream outputs are
+provisional and must not be treated as current or approved. If a material
+question is discovered, progression stops at the affected gate until the
+question is resolved, the authoritative source is updated and approved, and the
+affected downstream artifacts are revalidated.
+
 ## Quality Gates
 
 Typical gates are:

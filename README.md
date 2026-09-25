@@ -58,7 +58,10 @@ Release
 ```
 
 Artificial Intelligence may participate throughout the process, but generated
-artifacts are subject to defined quality gates and human accountability.
+artifacts remain proposals until the applicable human validation gate approves
+them. Downstream drafts may be prepared for analysis, but they are not treated
+as current or authoritative until their upstream inputs are approved and any
+required impact analysis and revalidation are complete.
 
 Ptilon is iterative: when a question or gap is discovered during architecture,
 planning, implementation, or verification, it is recorded, resolved through

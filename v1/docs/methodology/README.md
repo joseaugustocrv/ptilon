@@ -82,7 +82,7 @@ Includes:
 
 - project principles;
 - roles and responsibilities;
-- human approval points;
+- human approval points and lifecycle progression gates;
 - change control;
 - risk management;
 - AI usage rules;
@@ -176,6 +176,11 @@ Includes:
 
 Software and its specifications are living artifacts. Ptilon explicitly supports
 feedback from later engineering activities into earlier authoritative artifacts.
+Lifecycle progression is normally gated by human validation: AI may prepare
+proposals, but only approved artifacts become authoritative inputs to the next
+activity. Downstream drafts may be generated early for analysis, but they remain
+provisional until their upstream inputs are approved and any required impact
+analysis and revalidation are complete.
 
 When a downstream activity discovers uncertainty:
 
@@ -568,7 +573,8 @@ and organizational governance.
 ## 20. Completion Model
 
 A feature is **Implementation Ready** before coding only when the readiness
-criteria in the canonical model are satisfied.
+criteria in the canonical model are satisfied and all required human approval
+gates have been passed.
 
 A feature is considered ready for release when:
 

@@ -56,6 +56,26 @@ upstream artifact. This does not create a second lifecycle; it creates an
 evolution loop that returns to the authoritative source, evaluates impact, and
 revalidates the affected downstream artifacts.
 
+### Lifecycle progression and human validation
+
+By default, progression from one lifecycle activity to the next is gated by
+human validation according to project governance. An AI-generated artifact is a
+proposal until an authorized human review establishes it as approved and
+authoritative. Approval may be recorded through the project's normal governance
+mechanism.
+
+AI may prepare downstream draft artifacts before an upstream gate is approved
+when doing so is useful for analysis, impact discovery, or planning. Such drafts
+remain provisional and must not be treated as current, approved, authoritative,
+or Implementation Ready. Generating a downstream draft does not constitute
+approval of its upstream inputs.
+
+If a downstream activity discovers a material unresolved question that affects an
+upstream artifact, progression beyond the affected gate stops. The question is
+recorded, resolved through the clarification or change process, the authoritative
+source is updated and approved, and affected downstream artifacts are
+revalidated before they become current again.
+
 ## 4. Lifecycle Concepts
 
 ### Intent
@@ -288,6 +308,10 @@ AI may generate proposals, analyses, drafts, code, tests, and other derived
 artifacts. AI-generated changes to requirements, security requirements, quality
 requirements, architecture decisions, risk acceptance, exceptions, or release
 decisions remain proposals until approved according to project governance.
+Human validation is therefore a progression gate, not merely a final review.
+Each lifecycle activity may produce a candidate artifact, but an artifact must
+be approved before it becomes the authoritative basis for the next lifecycle
+activity.
 
 When an AI analysis identifies a missing or potentially necessary requirement,
 the result must be marked as **proposed** until an authorized human approves it.
@@ -440,6 +464,12 @@ as needed Impact Analysis
           ↓
    Continue downstream work
 ```
+
+When a material unresolved question is discovered, the affected lifecycle
+gate is blocked from progression until the question is resolved or explicitly
+accepted as non-blocking by the authorized human authority. Downstream drafts may
+be produced for analysis, but they remain provisional while the blocking issue is
+unresolved.
 
 The source artifact must be updated before affected downstream artifacts are
 treated as current. The impact analysis must identify both direct and indirect
