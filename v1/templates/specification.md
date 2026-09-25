@@ -1,12 +1,14 @@
-# Ptilon Specification Template
+# Specification
 
-## 1. Purpose
+## 1. Engineering Unit
 
-Define the expected behavior, scope, constraints, and acceptance criteria for a
-feature or change.
+**Unit:** [Stable project-local unit name / key]
 
-This template is intended to be used with the Ptilon Specification-Driven
-Development workflow and GitHub Spec Kit.
+**Parent Intent:** [Intent reference]
+
+**Requirements:** [REQ / SEC / QLT references]
+
+**Scope:** [Brief description of the unit's scope]
 
 ---
 
@@ -244,6 +246,10 @@ When applicable, define:
 ---
 
 ## 17. Traceability
+
+**Engineering Unit:** [Unit name / key]
+
+**Parent Intent:** [Intent reference]
 
 Where required, maintain relationships between:
 

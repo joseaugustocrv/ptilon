@@ -30,6 +30,45 @@ Release
 The detailed definitions and authority rules are maintained in
 [`../methodology/canonical-model.md`](../methodology/canonical-model.md).
 
+## Decomposition
+
+Requirements and Specifications may be organized into engineering units when
+a project or change is too large or heterogeneous to manage reliably as a
+single unit.
+
+The default pattern is:
+
+```text
+Intent
+  ↓
+Requirements
+  ├── Unit A
+  ├── Unit B
+  └── Unit C
+       ↓
+Specification
+  ├── Unit A
+  ├── Unit B
+  └── Unit C
+       ↓
+Architecture
+       ↓
+Plan
+       ↓
+Tasks
+       ↓
+Implementation
+       ↓
+Verification
+       ↓
+Convergence
+       ↓
+Release
+```
+
+Architecture, Plan, Tasks, Verification, and other downstream artifacts are
+updated according to impact rather than duplicated automatically for each unit.
+
 ## Cross-Cutting Activities
 
 The following activities may occur at the relevant lifecycle points:

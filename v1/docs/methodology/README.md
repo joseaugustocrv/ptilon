@@ -298,12 +298,14 @@ Reviews are cross-cutting activities, not an additional lifecycle stage.
 
 Ptilon uses traceability as a primary quality mechanism.
 
-A feature should be traceable through:
+A change should be traceable through the applicable engineering units:
 
 ```text
-Requirement ID
+Intent
     ↓
-Specification
+Requirement
+    ↓
+Engineering Unit
     ↓
 Acceptance Criterion
     ↓
@@ -317,6 +319,10 @@ Test
     ↓
 Verification Evidence
 ```
+
+Architecture, Plan, Tasks, and Verification remain shared artifacts by default;
+their references should identify the affected unit when that distinction is
+relevant.
 
 Traceability does not require every line of code to map to a
 requirement. It requires that significant intended behavior and
@@ -360,23 +366,67 @@ The preferred rule is:
 
 > **Change the source of intent before changing derived artifacts.**
 
-For example, when a requirement changes, the specification, plan, tasks,
-implementation, and tests must be evaluated for impact.
+For example, when a requirement or specification unit changes, the
+specification, architecture, plan, tasks, implementation, tests, security
+analysis, and release evidence must be evaluated for impact.
 
 Spec Kit's current guidance explicitly supports a living-spec model in
 which `spec.md` is treated as the contract and downstream artifacts are
 updated when intended behavior changes.
 
-## 13. Large Features
+## 13. Decomposition and Engineering Units
 
-When a feature is too large to maintain reliably as a single
-specification and implementation cycle, it should be decomposed into
-independently manageable specifications.
+When requirements or specifications become too large or heterogeneous to
+maintain reliably as a single unit, they may be decomposed into independently
+manageable **engineering units**.
 
-Ptilon adopts Spec Kit's "spec of specs" concept for this purpose.
+An engineering unit is a coherent project-local scope used to organize related
+requirements and specifications. It is not a lifecycle stage, architectural
+module, or mandatory directory structure. Small projects may use one implicit
+unit without introducing explicit decomposition.
 
-The decomposition should preserve traceability between the higher-level
-objective and the individual specifications.
+The Intent remains the upstream expression of the overall desired outcome.
+Requirements and Specifications may be divided into units while Architecture,
+Plan, Tasks, Verification, and other downstream artifacts remain shared by
+default.
+
+When a unit is added or changed, perform impact analysis against existing
+downstream artifacts. Update those artifacts only when the identified impact
+requires it.
+
+For example:
+
+```text
+Intent
+  ↓
+Requirements
+  ├── Authentication
+  ├── Billing
+  └── Reporting
+       ↓
+Specification
+  ├── Authentication
+  ├── Billing
+  └── Reporting
+       ↓
+Architecture
+       ↓
+Plan
+       ↓
+Tasks
+       ↓
+Implementation
+       ↓
+Verification
+       ↓
+Convergence
+       ↓
+Release
+```
+
+This generalizes the previous treatment of large features: decomposition is a
+general engineering mechanism rather than a special workflow for one feature
+size.
 
 ## 14. Existing Systems
 

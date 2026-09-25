@@ -52,7 +52,9 @@ resolution.
 
 Evaluate the applicable chain:
 
-Requirement
+Intent
+
+→ Requirement / Engineering Unit
 
 → Acceptance Criterion
 
@@ -73,11 +75,15 @@ Do not report a missing artifact merely because it is not applicable.
 
 ## Review
 
-### Requirements
+### Requirements and Engineering Units
 
 Verify:
 
 - Each significant requirement has an identifier.
+- Requirements are assigned to an appropriate engineering unit when
+  decomposition is used.
+- Specification units have coherent scope and traceability to their source
+  requirements.
 - Requirements have corresponding acceptance criteria where applicable.
 - Requirements can be traced to implementation work.
 
@@ -147,7 +153,7 @@ Summarize the state of traceability.
 
 # Traceability Matrix
 
-| Requirement | Acceptance Criterion | Architecture / ADR | Task | Implementation | Test | Evidence | Status |
+| Requirement / Unit | Acceptance Criterion | Architecture / ADR | Task | Implementation | Test | Evidence | Status |
 |---|---|---|---|---|---|---|---|
 
 # Gaps

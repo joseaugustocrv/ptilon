@@ -34,7 +34,20 @@ Out of scope:
 
 ---
 
-## 3. Workflow Demonstrated
+## 3. Engineering Unit
+
+**Unit:** `user-profile`
+
+This example represents one engineering unit. Its requirements and specification
+describe the unit's coherent scope.
+
+Architecture, tasks, test planning, security analysis, and release artifacts are
+shown as shared downstream artifacts for this example. A larger project may add
+other engineering units without automatically duplicating those artifacts.
+
+---
+
+## 4. Workflow Demonstrated
 
 ```text
 Requirements
@@ -58,7 +71,7 @@ Release
 
 ---
 
-## 4. Example Artifacts
+## 5. Example Artifacts
 
 The complete example contains:
 
@@ -81,7 +94,7 @@ specification.
 
 ---
 
-## 5. Requirements
+## 6. Requirements
 
 ### REQ-001 — Retrieve Own Profile
 
@@ -136,7 +149,7 @@ authorization, validation, and resource failures.
 
 ---
 
-## 6. Acceptance Criteria
+## 7. Acceptance Criteria
 
 ### ACC-001 — Retrieve Profile
 
@@ -189,7 +202,7 @@ is explicitly approved.
 
 ---
 
-## 7. Traceability Example
+## 8. Traceability Example
 
 | Requirement | Acceptance Criteria | Task | Test |
 | --- | --- | --- | --- |
@@ -208,7 +221,7 @@ is explicitly approved.
 
 ---
 
-## 8. Engineering Notes
+## 9. Engineering Notes
 
 The implementation should explicitly address:
 
@@ -225,7 +238,7 @@ documented through an ADR.
 
 ---
 
-## 9. Ptilon Demonstration
+## 10. Ptilon Demonstration
 
 This example illustrates several core Ptilon principles:
 

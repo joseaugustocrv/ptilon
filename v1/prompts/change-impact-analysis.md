@@ -54,13 +54,15 @@ resolution.
 
 Evaluate the proposed change against:
 
-### Requirements
+### Requirements and Engineering Units
 
 - Functional requirements
 - Acceptance criteria
 - Scope
 - Business rules
 - Constraints
+- Affected engineering units
+- Dependencies between units
 
 ### Architecture
 
@@ -155,9 +157,9 @@ Summarize the proposed change.
 | Area | Artifact / Component | Impact | Evidence | Required Action |
 |---|---|---|---|---|
 
-# Requirement Impact
+# Requirement and Unit Impact
 
-List affected requirements and acceptance criteria.
+List affected requirements, specification units, and acceptance criteria.
 
 # Architecture Impact
 
@@ -188,6 +190,15 @@ List artifacts requiring updates.
 # Open Questions
 
 List only questions that require clarification.
+
+# Downstream Artifact Impact
+
+For each affected downstream artifact, state whether it requires:
+- No change
+- Revision
+- New artifact
+
+Base the conclusion only on identified evidence.
 
 # Impact Conclusion
 

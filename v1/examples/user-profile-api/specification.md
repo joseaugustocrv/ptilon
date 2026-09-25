@@ -1,6 +1,15 @@
 # Example: User Profile API Specification
 
-## 1. Purpose
+## 1. Engineering Unit
+
+**Unit:** `user-profile`
+
+**Parent Intent:** [Example project intent]
+
+This specification is the authoritative specification for the `user-profile`
+engineering unit.
+
+## 2. Purpose
 
 This specification defines the functional and quality requirements for
 the User Profile API example.
@@ -10,7 +19,7 @@ described in the example README.
 
 ---
 
-## 2. Scope
+## 3. Scope
 
 ### In Scope
 
@@ -29,7 +38,7 @@ described in the example README.
 
 ---
 
-## 3. Functional Requirements
+## 4. Functional Requirements
 
 ### REQ-001 — Retrieve Own Profile
 
@@ -67,7 +76,7 @@ authorization, validation, resource, and processing failures.
 
 ---
 
-## 4. Data Requirements
+## 5. Data Requirements
 
 The profile representation shall contain only fields explicitly defined
 by the API contract.
@@ -80,7 +89,7 @@ information.
 
 ---
 
-## 5. Security Requirements
+## 6. Security Requirements
 
 ### SEC-001 — Ownership Authorization
 
@@ -98,7 +107,7 @@ Untrusted profile input shall be validated before persistence.
 
 ---
 
-## 6. Quality Requirements
+## 7. Quality Requirements
 
 ### QLT-001 — Testability
 
@@ -117,7 +126,7 @@ the supported version.
 
 ---
 
-## 7. Acceptance Criteria
+## 8. Acceptance Criteria
 
 ### ACC-001 — Retrieve Profile
 
@@ -170,7 +179,7 @@ is explicitly approved.
 
 ---
 
-## 8. Error Conditions
+## 9. Error Conditions
 
 The implementation shall define responses for at least:
 
@@ -185,7 +194,7 @@ The exact HTTP status codes and response schema are defined by the approved
 
 ---
 
-## 9. Traceability
+## 10. Traceability
 
 | Requirement | Acceptance Criteria |
 | --- | --- |
@@ -204,7 +213,7 @@ The exact HTTP status codes and response schema are defined by the approved
 
 ---
 
-## 10. Clarifications
+## 11. Clarifications
 
 The following details are intentionally delegated to the architecture/API
 contract where they are not required to define the business behavior:
@@ -219,7 +228,7 @@ These details must not contradict the requirements above.
 
 ---
 
-## 11. Definition of Done
+## 12. Definition of Done
 
 The feature is complete when:
 

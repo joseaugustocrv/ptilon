@@ -3,20 +3,20 @@
 This matrix connects requirements, acceptance criteria, architecture,
 implementation tasks, tests, and security controls.
 
-| ID | Requirement / Control | Acceptance Criteria | Architecture | Tasks | Test Plan | Threat Model |
+| ID | Unit | Requirement / Control | Acceptance Criteria | Architecture | Tasks | Test Plan | Threat Model |
 | --- | --- | --- | --- | --- | --- | --- |
-| REQ-001 | Retrieve own profile | ACC-001 | Profile Service, Authorization, Repository | TSK-001 | TST-001 | THR-001, THR-002 |
-| REQ-002 | Update permitted profile fields | ACC-002 | Profile Service, Validation, Repository | TSK-002 | TST-002 | THR-006 |
-| REQ-003 | Prevent access to another user's profile | ACC-003 | Authorization | TSK-003 | TST-003 | THR-001 |
-| REQ-004 | Validate profile input | ACC-004 | Validation | TSK-004 | TST-004 | THR-003 |
-| REQ-005 | Require authentication | ACC-005 | Authentication Context | TSK-001, TSK-003 | TST-005 | THR-002 |
-| REQ-006 | Handle expected errors consistently | ACC-004, ACC-005, ACC-007 | API Layer, Profile Service, API Contract | TSK-004 | TST-008 | — |
-| SEC-001 | Enforce ownership authorization | ACC-003 | Authorization | TSK-003, TSK-005 | TST-003 | THR-001 |
-| SEC-002 | Protect sensitive data | ACC-006 | API Layer, Repository | TSK-005 | TST-006 | THR-004 |
-| SEC-003 | Validate untrusted input | ACC-004 | Validation | TSK-005 | TST-004 | THR-003 |
-| QLT-001 | Maintain automated testability | ACC-008 | All relevant components | TSK-006 | TST-009 | — |
-| QLT-002 | Provide observability | ACC-007 | API Layer, observability mechanism | TSK-006, TSK-007 | TST-007 | THR-005 |
-| QLT-003 | Preserve compatibility | ACC-009 | API Layer, API Contract | TSK-007 | TST-010 | — |
+| REQ-001 | `user-profile` | Retrieve own profile | ACC-001 | Profile Service, Authorization, Repository | TSK-001 | TST-001 | THR-001, THR-002 |
+| REQ-002 | `user-profile` | Update permitted profile fields | ACC-002 | Profile Service, Validation, Repository | TSK-002 | TST-002 | THR-006 |
+| REQ-003 | `user-profile` | Prevent access to another user's profile | ACC-003 | Authorization | TSK-003 | TST-003 | THR-001 |
+| REQ-004 | `user-profile` | Validate profile input | ACC-004 | Validation | TSK-004 | TST-004 | THR-003 |
+| REQ-005 | `user-profile` | Require authentication | ACC-005 | Authentication Context | TSK-001, TSK-003 | TST-005 | THR-002 |
+| REQ-006 | `user-profile` | Handle expected errors consistently | ACC-004, ACC-005, ACC-007 | API Layer, Profile Service, API Contract | TSK-004 | TST-008 | — |
+| SEC-001 | `user-profile` | Enforce ownership authorization | ACC-003 | Authorization | TSK-003, TSK-005 | TST-003 | THR-001 |
+| SEC-002 | `user-profile` | Protect sensitive data | ACC-006 | API Layer, Repository | TSK-005 | TST-006 | THR-004 |
+| SEC-003 | `user-profile` | Validate untrusted input | ACC-004 | Validation | TSK-005 | TST-004 | THR-003 |
+| QLT-001 | `user-profile` | Maintain automated testability | ACC-008 | All relevant components | TSK-006 | TST-009 | — |
+| QLT-002 | `user-profile` | Provide observability | ACC-007 | API Layer, observability mechanism | TSK-006, TSK-007 | TST-007 | THR-005 |
+| QLT-003 | `user-profile` | Preserve compatibility | ACC-009 | API Layer, API Contract | TSK-007 | TST-010 | — |
 
 ## Artifact Dependencies
 

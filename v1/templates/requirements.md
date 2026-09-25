@@ -1,4 +1,12 @@
-# Requirements Template
+# Requirements
+
+## Engineering Unit
+
+**Unit:** [Stable project-local unit name / key]
+
+**Parent Intent:** [Intent reference]
+
+**Scope:** [Brief description of the unit's scope]
 
 ## Context
 
@@ -68,7 +76,11 @@
 
 **Source Intent:** [Intent reference]
 
+**Engineering Unit:** [Unit name / key]
+
 **Related Requirements:** [REQ / SEC / QLT references]
+
+**Related Units:** [Related unit names / keys, if applicable]
 
 ## Requirements Status
 

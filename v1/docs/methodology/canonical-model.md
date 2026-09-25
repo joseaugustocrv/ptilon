@@ -68,10 +68,18 @@ Approved statements of what the solution must provide or constrain. Ptilon
 uses specialized requirement identifiers for functional, security, and quality
 requirements.
 
+Requirements may be organized into **engineering units** when the scope is
+large enough that a single requirements artifact would become difficult to
+understand, review, or maintain.
+
 ### Specification
 
 The approved description of intended behavior, scope, acceptance criteria,
 constraints, and relevant domain rules needed to guide implementation.
+
+A specification may be organized into one or more engineering units. Each unit
+covers a coherent scope derived from the approved requirements and remains
+traceable to those requirements.
 
 ### Architecture & Design
 
@@ -180,7 +188,76 @@ The following rules apply:
 Prompts may define contextual input precedence for a specific activity, but
 that precedence must not contradict these general rules.
 
-## 7. Human and AI Authority
+## 7. Decomposition and Incremental Evolution
+
+Ptilon supports decomposition when the requirements or specification for a
+project or change become too large or heterogeneous to manage reliably as a
+single unit.
+
+An **engineering unit** is a project-local, coherent scope used to organize
+related requirements and specifications. It is not a lifecycle stage, a new
+artifact type, or a mandatory architectural boundary.
+
+The following rules apply:
+
+1. A small project or change may use a single implicit engineering unit without
+   introducing explicit unit structure.
+2. The project or change Intent remains the upstream expression of the overall
+   desired outcome.
+3. Requirements may be grouped into engineering units when decomposition
+   improves clarity, reviewability, ownership, or traceability.
+4. Specifications may be divided into corresponding engineering units.
+5. An engineering unit should have a stable project-local name or key. It does
+   not introduce a new canonical identifier prefix.
+6. Decomposition does not require duplicating the downstream lifecycle.
+7. Architecture, Plan, Tasks, Verification, and other downstream artifacts
+   remain project-level by default and are updated when the affected units
+   require changes.
+8. A new or changed unit must be assessed for impact on existing architecture,
+   plans, tasks, verification, security, quality, and release artifacts.
+9. A unit may require no downstream change, a revision of an existing artifact,
+   or creation of an additional artifact when project scope or governance
+   genuinely requires it.
+10. Relationships between units must be explicit when one unit depends on or
+   constrains another.
+11. Decomposition must preserve traceability from the Intent through the
+    applicable requirements and specifications into downstream engineering
+    artifacts.
+
+A typical project may therefore use:
+
+```text
+Intent
+  ↓
+Requirements
+  ├── Unit A
+  ├── Unit B
+  └── Unit C
+       ↓
+Specification
+  ├── Unit A
+  ├── Unit B
+  └── Unit C
+       ↓
+Architecture
+       ↓
+Plan
+       ↓
+Tasks
+       ↓
+Implementation
+       ↓
+Verification
+       ↓
+Convergence
+       ↓
+Release
+```
+
+The existence of multiple units does not imply that every downstream artifact
+must be duplicated for every unit.
+
+## 8. Human and AI Authority
 
 AI may generate proposals, analyses, drafts, code, tests, and other derived
 artifacts. AI-generated changes to requirements, security requirements, quality
@@ -194,7 +271,7 @@ AI must not invent missing requirements, decisions, evidence, test results,
 external facts, or approvals. If necessary information is missing, the output
 must identify the gap.
 
-## 8. Project Constitution and Tool Workflows
+## 9. Project Constitution and Tool Workflows
 
 A project may adopt a project Constitution to establish project-level
 principles, constraints, and governance. A Constitution is a governance
@@ -208,7 +285,7 @@ External tools may introduce their own workflow stages or commands. Those
 mechanisms must be interpreted as operational activities within the Ptilon
 lifecycle rather than as replacements for the canonical lifecycle.
 
-## 9. Canonical Identifiers
+## 10. Canonical Identifiers
 
 Ptilon lifecycle artifact identifiers use exactly three uppercase letters, a
 hyphen, and a three-digit sequence.
@@ -250,7 +327,7 @@ PRM-001
 Legacy two-letter or longer prefixes must not be introduced in new Ptilon
 artifacts.
 
-## 10. Requirement Relationships
+## 11. Requirement Relationships
 
 Security and quality requirements are specialized requirements. They use their
 own identifiers but participate in the same traceability discipline.
@@ -282,7 +359,7 @@ Verification Evidence
 Not every requirement requires every artifact, but any omitted relationship
 must be justified by the nature of the requirement.
 
-## 11. Changes
+## 12. Changes
 
 A material change to intended behavior follows:
 
@@ -293,7 +370,9 @@ Impact Analysis
  ↓
 Update source of intent
  ↓
-Revalidate dependent artifacts
+Revalidate affected requirements / specification units
+ ↓
+Assess downstream artifacts
  ↓
 Update implementation and verification
  ↓
@@ -302,10 +381,14 @@ Converge
 Release
 ```
 
+A change to one engineering unit does not automatically require duplication or
+recreation of Architecture, Plan, Tasks, or Verification artifacts. Those
+artifacts are updated according to the identified impact.
+
 A change must not be implemented only by editing a downstream artifact while
 leaving the authoritative source unchanged.
 
-## 11. Ptilon Core and Ptilon Governed
+## 13. Ptilon Core and Ptilon Governed
 
 Ptilon has one methodological core. Governance depth is proportional to risk.
 
@@ -328,7 +411,7 @@ gates, approval records, and durable verification evidence.
 These are governance controls around the same methodology, not a different
 engineering lifecycle.
 
-## 12. Methodology Change
+## 14. Methodology Change
 
 Changes to the Ptilon methodology itself must be evaluated for impact across:
 

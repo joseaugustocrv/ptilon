@@ -16,6 +16,7 @@ Ptilon is a methodology for structured, traceable, and verifiable AI-assisted so
 - [Intent](docs/methodology/intent.md)
 - [Intent Template](templates/intent.md)
 - [Requirements Template](templates/requirements.md)
+- [Specification Template](templates/specification.md)
 - [Examples](examples/README.md)
 - [References](references/README.md)
 

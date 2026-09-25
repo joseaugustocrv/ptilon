@@ -25,6 +25,8 @@ resulting artifacts.
 
 ## 3. Change Description
 
+**Affected Engineering Units:** `<unit names / keys>`
+
 ### Current State
 
 Describe the currently approved behavior or design.

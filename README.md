@@ -133,7 +133,9 @@ A central objective of Ptilon is maintaining traceability across the software
 lifecycle:
 
 ```text
-Requirement
+Intent
+    ↓
+Requirement / Engineering Unit
     ↓
 Specification
     ↓

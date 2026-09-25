@@ -2,6 +2,32 @@
 
 All notable changes to Ptilon are documented in this file.
 
+## [1.1.0] - 2026-09-25
+
+### Added
+
+- Introduced engineering units as a decomposition mechanism for large or
+  heterogeneous requirements and specifications.
+- Defined requirements and specifications as the primary artifacts that may be
+  decomposed into engineering units.
+- Defined Architecture, Plan, Tasks, Verification, and related downstream
+  artifacts as shared by default and updated according to impact rather than
+  duplicated automatically for each unit.
+- Added explicit impact analysis rules for changes to engineering units.
+- Generalized the previous Large Features guidance into a reusable decomposition
+  model.
+- Updated templates, prompts, workflow documentation, and the User Profile API
+  example to demonstrate the model.
+
+### Changed
+
+- Clarified that engineering units are project-local organizational scopes,
+  not lifecycle stages, canonical artifact types, architectural modules, or new
+  identifier prefixes.
+- Clarified that the canonical lifecycle remains unchanged.
+- Clarified traceability across engineering units and shared downstream
+  artifacts.
+
 ## [1.0.1] - 2026-09-24
 
 ### Added

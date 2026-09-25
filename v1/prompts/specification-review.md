@@ -105,6 +105,8 @@ Identify:
 - Explicitly excluded behavior
 - Ambiguous scope
 - Requirements that appear to belong to another change
+- Whether the specification unit has a coherent and stable scope
+- Whether requirements from another engineering unit are mixed into this unit
 
 ## Classification
 
@@ -136,7 +138,7 @@ List information required to continue safely.
 
 # Traceability Gaps
 
-List requirements or decisions that lack appropriate traceability.
+List requirements, engineering-unit relationships, or decisions that lack appropriate traceability.
 
 # Acceptance Criteria Gaps
 
