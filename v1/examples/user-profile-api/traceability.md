@@ -4,7 +4,7 @@ This matrix connects requirements, acceptance criteria, architecture,
 implementation tasks, tests, and security controls.
 
 | ID | Unit | Requirement / Control | Acceptance Criteria | Architecture | Tasks | Test Plan | Threat Model |
-| --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | REQ-001 | `user-profile` | Retrieve own profile | ACC-001 | Profile Service, Authorization, Repository | TSK-001 | TST-001 | THR-001, THR-002 |
 | REQ-002 | `user-profile` | Update permitted profile fields | ACC-002 | Profile Service, Validation, Repository | TSK-002 | TST-002 | THR-006 |
 | REQ-003 | `user-profile` | Prevent access to another user's profile | ACC-003 | Authorization | TSK-003 | TST-003 | THR-001 |
