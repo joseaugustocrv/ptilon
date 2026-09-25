@@ -299,7 +299,7 @@ Ptilon applies the following ADR principles:
 
 - Michael Nygard — Documenting Architecture Decisions
 - ISO/IEC/IEEE 42010 — Architecture description:
-  <https://www.iso.org/standard/50508.html>
+  <https://www.iso.org/standard/74393.html>
 - Ptilon Architecture: `references/standards/iso-42010.md`
 - Ptilon Governance: `docs/governance/README.md`
 - Ptilon Methodology: `docs/methodology/README.md`

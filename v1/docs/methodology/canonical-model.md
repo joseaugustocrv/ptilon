@@ -45,10 +45,16 @@ Convergence
 Release
 ```
 
-Clarification, analysis, checklists, security analysis, quality review, code
-review, and other reviews are **activities or gates within the lifecycle**.
+Clarification, impact analysis, checklists, security analysis, quality review,
+code review, and other reviews are **activities or gates within the lifecycle**.
 They are not additional lifecycle stages unless a project explicitly defines
 a project-specific extension.
+
+The lifecycle is iterative and recursive in practice. Work performed at a
+downstream point may reveal information that requires controlled revision of an
+upstream artifact. This does not create a second lifecycle; it creates an
+evolution loop that returns to the authoritative source, evaluates impact, and
+revalidates the affected downstream artifacts.
 
 ## 4. Lifecycle Concepts
 
@@ -107,10 +113,16 @@ Activities and evidence demonstrating that implemented behavior satisfies the
 applicable requirements and acceptance criteria and that relevant security and
 quality controls are satisfied.
 
+Verification is evidence-producing work. A test definition, successful
+execution result, review record, scan result, or other evidence must not be
+treated as proof merely because the artifact exists.
+
 ### Convergence
 
 The explicit comparison of intent, approved artifacts, implementation, and
 verification evidence to identify and resolve remaining discrepancies.
+Convergence may produce additional tasks; it does not authorize silent changes
+to requirements or architecture.
 
 ### Release
 
@@ -125,13 +137,26 @@ point in the lifecycle. They do not create additional lifecycle stages.
 
 ### Clarification
 
-Clarification is used when ambiguity, missing information, or conflicting
-statements could affect implementation or verification. It produces questions,
-identified assumptions, and surfaced conflicts for human resolution.
+Clarification is used whenever ambiguity, missing information, conflicting
+statements, or newly discovered domain facts could affect implementation or
+verification. It can be initiated from any lifecycle activity, including
+Architecture, Plan, Tasks, Implementation, or Verification.
 
-Clarification output is not itself authoritative. Resolved decisions must be
-incorporated into the appropriate authoritative artifact, such as Intent,
-Requirements, or Specification, before downstream work relies on them.
+A clarification has two distinct states:
+
+1. **Question** — an unresolved issue identified during engineering. It is
+   represented by `QST-###` and remains non-authoritative.
+2. **Clarification record** — the resolved interpretation, represented by
+   `CLR-###`, including the question, resolution, authority, affected artifacts,
+   and date.
+
+Clarification output is not authoritative merely because an answer exists.
+The authorized resolution must be incorporated into the appropriate
+authoritative artifact before downstream work relies on it.
+
+If the resolution changes approved intent or intended behavior rather than merely
+clarifying existing meaning, it is a material change and must follow the Change
+process.
 
 Review is not a lifecycle stage between Convergence and Release. Reviews occur
 where their subject matter requires them, for example:
@@ -296,7 +321,7 @@ hyphen, and a three-digit sequence.
 | `BUS` | Business Rule |
 | `ASM` | Assumption |
 | `QST` | Open Question |
-| `CLR` | Clarification |
+| `CLR` | Clarification Record |
 | `ACC` | Acceptance Criterion |
 | `SEC` | Security Requirement |
 | `QLT` | Quality Requirement |
@@ -359,27 +384,71 @@ Verification Evidence
 Not every requirement requires every artifact, but any omitted relationship
 must be justified by the nature of the requirement.
 
-## 12. Changes
+## 12. Changes and Evolution
 
-A material change to intended behavior follows:
+Ptilon distinguishes **clarification** from **change**.
+
+A clarification resolves uncertainty while preserving the approved meaning.
+A change modifies approved intent, scope, behavior, constraints, or another
+authoritative decision.
+
+A material change follows:
 
 ```text
 CHG
  ↓
 Impact Analysis
  ↓
-Update source of intent
+Update authoritative source
  ↓
 Revalidate affected requirements / specification units
  ↓
 Assess downstream artifacts
  ↓
-Update implementation and verification
+Revise affected architecture / plan / tasks / tests / security / evidence
+ ↓
+Re-run applicable quality gates
+ ↓
+Implementation / Verification
  ↓
 Converge
  ↓
 Release
 ```
+
+A downstream activity may discover a gap without being authorized to resolve it
+by assumption. Instead:
+
+```text
+Any lifecycle activity
+        ↓
+      QST
+        ↓
+Clarification / analysis
+        ↓
+      CLR
+        ↓
+Does the resolution change approved intent?
+       / \
+     No   Yes
+     ↓     ↓
+Update    CHG
+source    ↓
+as needed Impact Analysis
+     \     /
+      Revalidate
+          ↓
+   Continue downstream work
+```
+
+The source artifact must be updated before affected downstream artifacts are
+treated as current. The impact analysis must identify both direct and indirect
+effects, including dependencies, interfaces, data, security, quality,
+verification, operations, documentation, and release evidence.
+
+Affected downstream artifacts are considered **not revalidated** until their
+impact has been assessed and the required revisions or explicit no-change
+decisions have been recorded.
 
 A change to one engineering unit does not automatically require duplication or
 recreation of Architecture, Plan, Tasks, or Verification artifacts. Those
@@ -388,7 +457,33 @@ artifacts are updated according to the identified impact.
 A change must not be implemented only by editing a downstream artifact while
 leaving the authoritative source unchanged.
 
-## 13. Ptilon Core and Ptilon Governed
+## 13. Readiness for Implementation
+
+`Implementation Ready` is a quality state, not a lifecycle stage.
+
+A scope is Implementation Ready only when:
+
+1. approved intent and applicable requirements are current;
+2. material questions affecting implementation are resolved or explicitly
+   accepted as non-blocking;
+3. the specification is approved and contains observable acceptance criteria;
+4. relevant architecture and significant decisions are approved;
+5. the implementation plan is complete enough to establish dependencies and
+   sequencing;
+6. tasks are actionable, dependency-aware, traceable, and independently
+   verifiable;
+7. security and quality requirements have corresponding controls or
+   verification methods where applicable;
+8. required cross-artifact consistency analysis is clean or has approved,
+   documented exceptions;
+9. no affected downstream artifact is awaiting impact assessment or
+   revalidation;
+10. required test strategy and acceptance verification are defined.
+
+Implementation Ready does not mean that the software is implemented or that
+release is approved.
+
+## 14. Ptilon Core and Ptilon Governed
 
 Ptilon has one methodological core. Governance depth is proportional to risk.
 
@@ -411,7 +506,7 @@ gates, approval records, and durable verification evidence.
 These are governance controls around the same methodology, not a different
 engineering lifecycle.
 
-## 14. Methodology Change
+## 15. Methodology Change
 
 Changes to the Ptilon methodology itself must be evaluated for impact across:
 

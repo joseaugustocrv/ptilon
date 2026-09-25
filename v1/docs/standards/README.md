@@ -35,7 +35,7 @@ mandatory requirements without justification.
 
 ## 3. Primary standards
 
-### 3.1 ISO/IEC/IEEE 12207
+### 3.1 ISO/IEC/IEEE 12207:2026
 
 Systems and software engineering — Software life cycle processes
 
@@ -47,9 +47,9 @@ completeness.
 
 ---
 
-### 3.2 ISO/IEC/IEEE 29148
+### 3.2 ISO/IEC/IEEE 29148:2018
 
-Systems and software engineering — Requirements engineering
+Systems and software engineering — Life cycle processes — Requirements engineering
 
 Provides principles and practices for requirements engineering, including
 requirements definition, analysis, specification, validation, and management.
@@ -59,7 +59,7 @@ traceability.
 
 ---
 
-### 3.3 ISO/IEC 25010
+### 3.3 ISO/IEC 25010:2023
 
 Systems and software engineering — Systems and software Quality Requirements
 and Evaluation (SQuaRE) — Product quality model
@@ -72,9 +72,9 @@ only dimension of software quality.
 
 ---
 
-### 3.4 ISO/IEC/IEEE 42010
+### 3.4 ISO/IEC/IEEE 42010:2022
 
-Systems and software engineering — Architecture description
+Systems, software and enterprise — Architecture description
 
 Provides principles for describing system architecture, including
 stakeholders, concerns, viewpoints, views, and architecture descriptions.
@@ -242,10 +242,10 @@ model when justified.
 ## 10. References
 
 - ISO Standards: <https://www.iso.org/standards.html>
-- ISO/IEC/IEEE 12207: <https://www.iso.org/standard/63712.html>
+- ISO/IEC/IEEE 12207: <https://www.iso.org/standard/90219.html>
 - ISO/IEC/IEEE 29148: <https://www.iso.org/standard/72089.html>
 - ISO/IEC 25010: <https://www.iso.org/standard/78176.html>
-- ISO/IEC/IEEE 42010: <https://www.iso.org/standard/50508.html>
+- ISO/IEC/IEEE 42010: <https://www.iso.org/standard/74393.html>
 - NIST SSDF: <https://csrc.nist.gov/Projects/ssdf>
 - GitHub Spec Kit: <https://github.com/github/spec-kit>
 

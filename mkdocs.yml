@@ -69,12 +69,16 @@ nav:
       - ADR: templates/adr.md
       - Bug Report: templates/bug-report.md
       - Change Request: templates/change-request.md
+      - Clarification Record: templates/clarification.md
       - Constitution: templates/constitution.md
       - Quality Checklist: templates/quality-checklist.md
       - Release Checklist: templates/release-checklist.md
+      - Architecture: templates/architecture.md
+      - Plan: templates/plan.md
       - Specification: templates/specification.md
       - Tasks: templates/tasks.md
       - Test Plan: templates/test-plan.md
+      - Verification Record: templates/verification.md
       - Threat Model: templates/threat-model.md
 
   - Examples:
@@ -83,11 +87,14 @@ nav:
           - Overview: examples/user-profile-api/README.md
           - API Contract: examples/user-profile-api/api-contract.md
           - Architecture: examples/user-profile-api/architecture.md
+          - Plan: examples/user-profile-api/plan.md
+          - Clarification: examples/user-profile-api/clarification.md
           - Definition of Done: examples/user-profile-api/definition-of-done.md
           - Release Checklist: examples/user-profile-api/release-checklist.md
           - Specification: examples/user-profile-api/specification.md
           - Tasks: examples/user-profile-api/tasks.md
           - Test Plan: examples/user-profile-api/test-plan.md
+          - Verification: examples/user-profile-api/verification.md
           - Threat Model: examples/user-profile-api/threat-model.md
           - Traceability: examples/user-profile-api/traceability.md
 

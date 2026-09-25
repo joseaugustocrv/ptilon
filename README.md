@@ -60,6 +60,11 @@ Release
 Artificial Intelligence may participate throughout the process, but generated
 artifacts are subject to defined quality gates and human accountability.
 
+Ptilon is iterative: when a question or gap is discovered during architecture,
+planning, implementation, or verification, it is recorded, resolved through
+the appropriate authority, incorporated into the authoritative artifact, and
+propagated through impact analysis before downstream work continues.
+
 ## Foundation
 
 Ptilon builds upon established practices and standards, including:

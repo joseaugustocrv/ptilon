@@ -8,7 +8,7 @@ implementation tasks, tests, and security controls.
 | REQ-001 | `user-profile` | Retrieve own profile | ACC-001 | Profile Service, Authorization, Repository | TSK-001 | TST-001 | THR-001, THR-002 |
 | REQ-002 | `user-profile` | Update permitted profile fields | ACC-002 | Profile Service, Validation, Repository | TSK-002 | TST-002 | THR-006 |
 | REQ-003 | `user-profile` | Prevent access to another user's profile | ACC-003 | Authorization | TSK-003 | TST-003 | THR-001 |
-| REQ-004 | `user-profile` | Validate profile input | ACC-004 | Validation | TSK-004 | TST-004 | THR-003 |
+| REQ-004 | `user-profile` | Validate profile input | ACC-004 | Validation | TSK-002, TSK-005 | TST-004 | THR-003 |
 | REQ-005 | `user-profile` | Require authentication | ACC-005 | Authentication Context | TSK-001, TSK-003 | TST-005 | THR-002 |
 | REQ-006 | `user-profile` | Handle expected errors consistently | ACC-004, ACC-005, ACC-007 | API Layer, Profile Service, API Contract | TSK-004 | TST-008 | — |
 | SEC-001 | `user-profile` | Enforce ownership authorization | ACC-003 | Authorization | TSK-003, TSK-005 | TST-003 | THR-001 |

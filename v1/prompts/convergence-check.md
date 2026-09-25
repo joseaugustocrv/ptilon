@@ -46,6 +46,13 @@ evidence are evidence, not authority to change requirements. If sources conflict
 surface the conflict and request an authorized decision rather than inventing a
 resolution.
 
+## Evolution Rule
+
+If convergence finds a missing or contradictory requirement, architecture
+decision, or domain rule, do not invent the resolution. Raise a `QST-###`.
+If the authorized resolution changes approved behavior, create or update the
+applicable `CHG-###` and perform impact analysis before implementation resumes.
+
 ## Convergence Dimensions
 
 ### 1. Requirements

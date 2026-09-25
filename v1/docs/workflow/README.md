@@ -128,16 +128,42 @@ Downstream artifacts do not silently override upstream approved intent. When a
 conflict is detected, the workflow must surface it, obtain an authorized human
 decision, update the source of intent, and propagate the change.
 
-## Change Flow
+## Evolution and Change Flow
+
+A gap may be discovered at any lifecycle point. It must not be resolved by
+silently inventing behavior.
+
+```text
+Any lifecycle activity
+        ↓
+      QST
+        ↓
+Clarification / analysis
+        ↓
+      CLR
+        ↓
+Update authoritative artifact
+        ↓
+Impact analysis
+        ↓
+Revalidate affected downstream artifacts
+        ↓
+Continue work
+```
+
+When the resolution changes approved intent or behavior, use `CHG` and the
+material-change process:
 
 ```text
 CHG
  ↓
 Impact Analysis
  ↓
-Update source of intent
+Update authoritative source
  ↓
-Revalidate dependent artifacts
+Revise affected artifacts
+ ↓
+Revalidate
  ↓
 Implementation
  ↓
@@ -147,6 +173,9 @@ Convergence
  ↓
 Release
 ```
+
+`Implementation Ready` is reached only when the readiness criteria in the
+canonical model are satisfied.
 
 ## AI Participation
 

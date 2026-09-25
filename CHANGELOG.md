@@ -2,6 +2,33 @@
 
 All notable changes to Ptilon are documented in this file.
 
+## [1.2.0] - 2026-09-25
+
+### Added
+
+- Defined controlled feedback from any lifecycle activity back to authoritative
+  artifacts through `QST` questions and `CLR` clarification records.
+- Distinguished clarification from material change and formalized `CHG` impact
+  analysis for changes to approved intent.
+- Defined `Implementation Ready` as a quality state with explicit readiness
+  criteria before coding.
+- Added reusable Architecture, Plan, Verification, and Clarification templates.
+- Expanded the User Profile API example with plan, verification, and a
+  downstream-discovered clarification scenario.
+
+### Changed
+
+- Strengthened the canonical lifecycle to explicitly support iterative and
+  recursive evolution without creating additional lifecycle stages.
+- Strengthened task requirements so tasks must be actionable and independently
+  verifiable rather than merely present.
+- Clarified that affected downstream artifacts remain not revalidated until
+  impact assessment and required revisions are complete.
+- Updated standards references to current published editions where applicable,
+  including ISO/IEC/IEEE 12207:2026 and ISO/IEC/IEEE 42010:2022.
+- Updated the Spec Kit reference to its current clarification, checklist,
+  analysis, implementation, and convergence workflow.
+
 ## [1.1.0] - 2026-09-25
 
 ### Added

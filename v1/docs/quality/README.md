@@ -163,10 +163,19 @@ testable acceptance criteria.
 Architecture addresses relevant functional, quality, and security
 constraints.
 
+### Implementation Readiness Gate
+
+Before coding begins, the scope is `Implementation Ready`: approved
+requirements and architecture are current, material questions are resolved,
+tasks are actionable and verifiable, and cross-artifact consistency analysis
+has no unapproved blocking findings.
+
 ### Implementation Gate
 
 Implementation follows approved artifacts and required engineering
-controls.
+controls. If implementation reveals a requirement, architecture, or domain
+gap, raise a question and return through the controlled evolution loop rather
+than silently inventing behavior.
 
 ### Verification Gate
 

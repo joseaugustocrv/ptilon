@@ -16,7 +16,7 @@ GitHub Spec Kit
 
 Official repository: <https://github.com/github/spec-kit>
 
-Official documentation: <https://github.github.com/spec-kit/>
+Official documentation: <https://github.com/github/spec-kit/tree/main/docs>
 
 Spec Kit provides structured workflows that keep intent and evidence ahead of
 implementation.
@@ -403,9 +403,9 @@ indefinitely on a historical command set.
 ## 22. References
 
 - GitHub Spec Kit repository: <https://github.com/github/spec-kit>
-- GitHub Spec Kit documentation: <https://github.github.com/spec-kit/>
+- GitHub Spec Kit documentation: <https://github.github.io/spec-kit/>
 - Agentic SDD reference:
-  <https://github.github.com/spec-kit/reference/agentic-sdd.html>
+  <https://github.github.io/spec-kit/reference/agentic-sdd.html>
 - Ptilon Standards: `docs/standards/README.md`
 - Ptilon Methodology: `docs/methodology/README.md`
 - Ptilon Workflow: `docs/workflow/README.md`

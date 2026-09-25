@@ -36,9 +36,11 @@ Tasks should:
 - identify relevant dependencies;
 - remain traceable to governing artifacts;
 - be small enough to execute and verify;
-- avoid silently introducing new requirements;
-- identify relevant verification;
-- expose blockers and assumptions.
+- identify the affected component, file, interface, or artifact when known;
+- state the expected implementation behavior or change;
+- identify relevant verification and acceptance criteria;
+- expose blockers and assumptions;
+- avoid silently introducing new requirements or architectural decisions.
 
 ---
 
@@ -50,9 +52,19 @@ Tasks should:
 
 [What must be accomplished?]
 
+#### Scope of Change
+
+[What component, file, interface, data structure, test, or artifact is expected
+to change?]
+
 #### Source
 
 [Requirement / specification / ADR / plan reference]
+
+#### Expected Behavior
+
+[Describe the behavior or implementation outcome required by the source
+artifacts.]
 
 #### Dependencies
 
@@ -66,7 +78,12 @@ Tasks should:
 
 #### Verification
 
-[How completion will be verified.]
+[Specific test, check, acceptance criterion, review, or other completion signal.]
+
+#### Acceptance / Completion Criteria
+
+- [ ] [Observable criterion]
+- [ ] [Observable criterion]
 
 #### Evidence
 
@@ -259,10 +276,26 @@ specification.
 
 ---
 
-## 15. Status
+## 15. Implementation Readiness
+
+A task is implementation-ready only when an implementer can determine from the
+task and its linked authoritative artifacts:
+
+- what behavior or technical change is required;
+- why the change is required;
+- which component, file, interface, or artifact is affected, when known;
+- which requirements or acceptance criteria govern the work;
+- what dependencies or blockers exist;
+- what completion criteria must be satisfied;
+- how completion will be verified.
+
+A task that requires the implementer to invent a requirement, make an
+unrecorded architectural decision, or discover the expected behavior from
+informal conversation is not implementation-ready. Raise a `QST-###` instead.
+
+## 16. Status
 
 This template defines the recommended structure for implementation tasks within
-
 Ptilon.
 
 Projects may adapt the format while preserving traceability, dependency

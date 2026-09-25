@@ -27,6 +27,9 @@ resulting artifacts.
 
 **Affected Engineering Units:** `<unit names / keys>`
 
+**Origin:** `<QST / defect / stakeholder request / operational finding /
+security finding / other>`
+
 ### Current State
 
 Describe the currently approved behavior or design.
@@ -57,6 +60,8 @@ Evaluate the effect on:
 - Documentation
 - Schedule / delivery scope
 - Dependencies
+- Open questions / clarifications
+- Release evidence and rollback
 
 ### Impact Summary
 
@@ -65,6 +70,14 @@ Evaluate the effect on:
 Rationale:
 
 `<analysis>`
+
+### Affected Artifact Status
+
+Identify artifacts that must be revised or explicitly assessed as unaffected.
+
+| Artifact | Identifier | Action | Revalidation |
+| --- | --- | --- | --- |
+| [Artifact] | [ID] | [Update / No change / Supersede] | [Pending / Complete] |
 
 ---
 
@@ -177,6 +190,7 @@ Conditions or constraints:
 
 ## 12. Implementation and Verification
 
+- [ ] Source of intent / authoritative artifact updated.
 - [ ] Specification updated.
 - [ ] Architecture updated where required.
 - [ ] Implementation completed.
@@ -184,6 +198,7 @@ Conditions or constraints:
 - [ ] Regression verification completed.
 - [ ] Documentation updated.
 - [ ] Release impact assessed.
+- [ ] All affected artifacts revalidated or explicit no-change decisions recorded.
 - [ ] Change evidence retained.
 
 ---

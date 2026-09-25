@@ -45,6 +45,13 @@ evidence are evidence, not authority to change requirements. If sources conflict
 surface the conflict and request an authorized decision rather than inventing a
 resolution.
 
+## Readiness Preconditions
+
+Before generating tasks, verify that the specification and architecture are
+approved enough for task decomposition and that material questions affecting
+implementation are resolved. If not, stop task generation and return the
+blocking `QST-###` questions instead of inventing answers.
+
 ## Task Design
 
 Each task should:
@@ -53,7 +60,10 @@ Each task should:
 - Reference the requirement or artifact it supports.
 - Have a clear objective.
 - Produce a concrete result.
+- Identify the affected component, file, interface, or artifact when known.
+- State expected behavior or implementation outcome.
 - Have explicit completion criteria.
+- Identify a specific verification signal.
 - Identify dependencies where applicable.
 - Be independently understandable.
 - Be small enough to implement and verify without hiding unrelated work.

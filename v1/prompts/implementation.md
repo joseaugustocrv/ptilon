@@ -47,6 +47,13 @@ evidence are evidence, not authority to change requirements. If sources conflict
 surface the conflict and request an authorized decision rather than inventing a
 resolution.
 
+## Preconditions
+
+Proceed only when the relevant scope is `Implementation Ready` according to the
+Ptilon canonical model. If a material requirement, architectural decision,
+dependency, or acceptance behavior is unresolved, stop and raise a `QST-###`
+rather than guessing.
+
 ## Before Implementation
 
 Analyze:

@@ -81,8 +81,10 @@ examples/user-profile-api/
 ├── specification.md
 ├── api-contract.md
 ├── architecture.md
+├── plan.md
 ├── tasks.md
 ├── test-plan.md
+├── verification.md
 ├── threat-model.md
 ├── traceability.md
 ├── definition-of-done.md
@@ -221,7 +223,20 @@ is explicitly approved.
 
 ---
 
-## 9. Engineering Notes
+## 9. Implementation Readiness
+
+Before implementation, this example demonstrates the Ptilon
+`Implementation Ready` state:
+
+- requirements are approved and traceable;
+- acceptance criteria are observable;
+- architecture and significant decisions are documented;
+- the plan establishes sequencing and dependencies;
+- tasks identify objectives, sources, completion criteria, and verification;
+- security and quality controls have verification methods;
+- no material question remains unresolved.
+
+## 10. Engineering Notes
 
 The implementation should explicitly address:
 
@@ -238,7 +253,7 @@ documented through an ADR.
 
 ---
 
-## 10. Ptilon Demonstration
+## 11. Ptilon Demonstration
 
 This example illustrates several core Ptilon principles:
 

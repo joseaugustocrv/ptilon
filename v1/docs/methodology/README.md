@@ -174,32 +174,36 @@ Includes:
 
 ### 5.6 Evolution
 
-Software and its specifications are living artifacts.
+Software and its specifications are living artifacts. Ptilon explicitly supports
+feedback from later engineering activities into earlier authoritative artifacts.
 
-When intended behavior changes:
+When a downstream activity discovers uncertainty:
 
 ```text
-Change in intent
+Discovery at any lifecycle activity
       ↓
-Update requirement / specification
+QST — record the unresolved question
       ↓
-Revalidate
+Clarification / analysis
       ↓
-Update architecture / plan
+CLR — record the authorized resolution
       ↓
-Regenerate or update tasks
-      ↓
-Analyze consistency
-      ↓
-Implement
-      ↓
-Verify
-      ↓
-Converge
+Is approved intent changed?
+      ├── No → update the authoritative artifact as needed
+      └── Yes → CHG — perform controlled change
+                    ↓
+              Impact analysis
+                    ↓
+          revise affected artifacts
+                    ↓
+              revalidate
+                    ↓
+             continue work
 ```
 
-The specification must not silently become obsolete while implementation
-evolves.
+The same loop applies when verification or convergence discovers an omission,
+contradiction, or implementation gap. The specification must not silently
+become obsolete while implementation evolves.
 
 ## 6. Quality Gates
 
@@ -227,10 +231,15 @@ quality and security constraints.
 
 ### Gate 5 — Pre-Implementation
 
-Verify consistency between specification, plan, and tasks.
+Verify consistency between specification, architecture, plan, and tasks.
 
-This is where Spec Kit's checklist and analyze capabilities are
-particularly useful.
+The scope must satisfy the `Implementation Ready` criteria defined in the
+canonical model. In particular, tasks must be actionable enough for an
+implementer or coding agent to execute without rediscovering requirements,
+architecture, or acceptance behavior.
+
+This is where Spec Kit's checklist and analyze capabilities are particularly
+useful.
 
 ### Gate 6 — Implementation
 
@@ -366,13 +375,20 @@ The preferred rule is:
 
 > **Change the source of intent before changing derived artifacts.**
 
-For example, when a requirement or specification unit changes, the
-specification, architecture, plan, tasks, implementation, tests, security
-analysis, and release evidence must be evaluated for impact.
+Clarifications may be discovered at any stage. An unresolved question is
+non-authoritative; its authorized resolution is recorded and incorporated into
+the authoritative artifact. If the resolution changes approved meaning, it
+becomes a controlled change.
 
-Spec Kit's current guidance explicitly supports a living-spec model in
-which `spec.md` is treated as the contract and downstream artifacts are
-updated when intended behavior changes.
+When a requirement or specification unit changes, the specification,
+architecture, plan, tasks, implementation, tests, security analysis,
+documentation, operational controls, and release evidence must be evaluated
+for impact. Work may continue only on artifacts that are current or whose
+impact has explicitly been assessed.
+
+Spec Kit's current workflow also supports repeated clarification, consistency
+analysis, implementation, and convergence; Ptilon adds the governance rule
+that the authoritative source and downstream impact must remain explicit.
 
 ## 13. Decomposition and Engineering Units
 
@@ -530,7 +546,7 @@ A Ptilon implementation should produce or maintain, as applicable:
 - project constitution;
 - requirements;
 - specifications;
-- clarification records incorporated into authoritative artifacts;
+- clarification questions and authorized clarification records;
 - acceptance criteria;
 - architecture documentation;
 - architecture decisions;
@@ -540,7 +556,7 @@ A Ptilon implementation should produce or maintain, as applicable:
 - analysis results;
 - source code;
 - automated tests;
-- verification evidence;
+- verification records and evidence;
 - security evidence;
 - release evidence;
 - change history.
@@ -550,6 +566,9 @@ determined by project size, complexity, risk, regulatory requirements,
 and organizational governance.
 
 ## 20. Completion Model
+
+A feature is **Implementation Ready** before coding only when the readiness
+criteria in the canonical model are satisfied.
 
 A feature is considered ready for release when:
 

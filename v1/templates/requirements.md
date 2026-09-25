@@ -72,6 +72,20 @@
 | --- | --- | --- | --- |
 | QST-001 | [Question] | [Owner] | Open |
 
+## Clarifications
+
+Record resolved questions that affect the meaning of these requirements.
+
+| ID | Question | Resolution | Related Change |
+| --- | --- | --- | --- |
+| CLR-001 | [Question] | [Authorized resolution] | [CHG-### / N/A] |
+
+## Change History
+
+| Version | Date | Change | Author |
+| --- | --- | --- | --- |
+| 0.1 | [Date] | Initial requirements | [Author] |
+
 ## Traceability
 
 **Source Intent:** [Intent reference]
